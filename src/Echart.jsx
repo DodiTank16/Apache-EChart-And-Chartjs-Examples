@@ -2,7 +2,7 @@ import React from "react";
 import ReactEcharts from "echarts-for-react";
 
 function Echart() {
-  option = {
+  const option = {
     tooltip: {
       trigger: "axis",
       axisPointer: {
