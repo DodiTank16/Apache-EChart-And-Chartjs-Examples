@@ -1,14 +1,13 @@
 import { CategoryScale } from "chart.js";
 import Chart from "chart.js/auto";
-import { useState } from "react";
-import { Bar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import "./styles.css";
 import { Data } from "./utils/Data";
 
 Chart.register(CategoryScale);
 
-export default function Chartjs() {
-  const chartData = useState({
+export default function PieChartJs() {
+  const chartData = {
     labels: Data.map((data) => data.year),
     datasets: [
       {
@@ -25,13 +24,13 @@ export default function Chartjs() {
         borderWidth: 2,
       },
     ],
-  });
+  };
 
   return (
     <div className="App">
       <div className="chart-container">
         <h2 style={{ textAlign: "center" }}>Bar Chart</h2>
-        <Bar
+        <Pie
           data={chartData}
           options={{
             plugins: {
